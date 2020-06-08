@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Form, Input, Button, Col, Row, message } from 'antd';
 
 import { getData } from '../../actions';
+import { NavTitle } from '../Styled-components';
 
 const style = {
   marginTop: '10px',
@@ -26,7 +27,7 @@ let SearchField = ({ getData }) => {
     <>
       <Row>
         <Col span={24} style={{ ...style }}>
-          <h3 style={{ paddingLeft: '5px' }}>ITUNES</h3>
+          <NavTitle>ITUNES</NavTitle>
           <Form layout="inline" form={form}>
             <Form.Item>
               <Input

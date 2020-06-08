@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import Item from '../Items/Item';
 import { mapStateToProps } from '../../store/store';
+import { CustomSpinner } from '../Styled-components';
 
 const ItemContainer = ({ data: { results, error, loading } }) => (
   <>
@@ -15,7 +16,7 @@ const ItemContainer = ({ data: { results, error, loading } }) => (
           : null}
       </Row>
     </Space>
-    {loading ? <div className="spinner" /> : null}
+    {loading ? <CustomSpinner /> : null}
     {error ? <Result status="404" title="404" subTitle={error} /> : null}
   </>
 );

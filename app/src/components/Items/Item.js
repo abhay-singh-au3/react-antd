@@ -1,6 +1,8 @@
 import React from 'react';
 import { Card, Col, Avatar, Tag, Space } from 'antd';
 
+import { CustomAudio } from '../Styled-components';
+
 const { Meta } = Card;
 
 const Item = ({
@@ -18,10 +20,10 @@ const Item = ({
         <Tag color="green">$ {collectionPrice}</Tag>
         <Tag color="magenta">{country}</Tag>
         <br />
-        <audio preload="none" controls style={{ width: '85%', padding: 5 }}>
+        <CustomAudio preload="none" controls>
           <source src={previewUrl} type="audio/mpeg" />
           Not supported
-        </audio>
+        </CustomAudio>
         <Meta
           title={artistName}
           description={primaryGenreName}
